@@ -1,0 +1,29 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "amd": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "module": true,
+    "Promise": true
+  },
+  "rules": {
+    "arrow-body-style": ["error", "always"],
+    "no-var": ["error"],
+    "no-duplicate-imports": ["error"],
+    "indent": ["error", 4],
+    "camelcase": ["error", { "properties": "always" }],
+    "new-cap": ["error", { "capIsNew": false }],
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-empty-function": ["error", { "allow": ["functions","arrowFunctions","generatorFunctions","methods","generatorMethods","getters","setters","constructors"] }],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "no-undef": ["error"],
+    "no-use-before-define": ["error"]
+  }
+}

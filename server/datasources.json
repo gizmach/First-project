@@ -1,0 +1,23 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "stackPostgreDb": {
+    "host": "192.168.1.156",
+    "port": 5432,
+    "url": "",
+    "database": "postgres",
+    "password": "",
+    "name": "stackPostgreDb",
+    "user": "postgres",
+    "connector": "postgresql",
+    "schema": "stack"
+  },
+  "fileSystem": {
+    "name": "fileSystem",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./assets"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Enterprise_Ref",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "short_name": {
+      "type": "string",
+      "required": false,
+      "description": "Короткое название"
+    },
+    "full_name": {
+      "type": "string",
+      "required": true,
+      "description": "Полное название"
+    },
+    "flag_vat": {
+      "type": "number",
+      "required": false,
+      "description": ""
+    },
+    "okpo": {
+      "type": "string",
+      "required": false,
+      "description": "ОКПО"
+    },
+    "itn": {
+      "type": "string",
+      "required": false,
+      "description": "ИНН"
+    },
+    "iec": {
+      "type": "string",
+      "required": false,
+      "description": "КПП"
+    },
+    "website": {
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    "mail": {
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    "phones": {
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    "fax": {
+      "type": "string",
+      "required": false,
+      "description": ""
+    },
+    "registered_office_address_id": {
+      "type": "string",
+      "required": false,
+      "description": "Юридический адрес"
+    },
+    "legal_address_address_id": {
+      "type": "string",
+      "required": false,
+      "description": "Фактический адрес"
+    },
+    "comment": {
+      "type": "string",
+      "required": false,
+      "description": "Комментарий"
+    },
+    "category": {
+      "type": "number",
+      "required": false,
+      "description": "Категория организации УК,Бюджетное,Промышленное"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "enterprise_id_Service_Ref_id": {
+      "type": "hasMany",
+      "model": "Service_Ref",
+      "foreignKey": "enterprise_id",
+      "through": "out_link_service"
+    },
+    "management_enterprise_id_Balance_adjustment_id": {
+      "type": "hasMany",
+      "model": "Balance_adjustment",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Balance_adjustment_id": {
+      "type": "hasMany",
+      "model": "Balance_adjustment",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "management_enterprise_id_Balance_resourse_id": {
+      "type": "hasMany",
+      "model": "Balance_resourse",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Balance_resourse_id": {
+      "type": "hasMany",
+      "model": "Balance_resourse",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "management_enterprise_id_Balance_id": {
+      "type": "hasMany",
+      "model": "Balance",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Balance_id": {
+      "type": "hasMany",
+      "model": "Balance",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "management_enterprise_id_Payment_id": {
+      "type": "hasMany",
+      "model": "Payment",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Payment_id": {
+      "type": "hasMany",
+      "model": "Payment",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "resource_enterprise_id_Payment_resourse_id": {
+      "type": "hasMany",
+      "model": "Payment_resourse",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "management_enterprise_id_Payment_resourse_id": {
+      "type": "hasMany",
+      "model": "Payment_resourse",
+      "foreignKey": "management_enterprise_id"
+    },
+    "management_enterprise_id_Social_benefits_id": {
+      "type": "hasMany",
+      "model": "Social_benefits",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Social_benefits_id": {
+      "type": "hasMany",
+      "model": "Social_benefits",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "ref_enterprise_id_Out_link_enterprises_id": {
+      "type": "belongsTo",
+      "model": "Out_link_enterprises",
+      "foreignKey": "ref_enterprise_id"
+    },
+    "management_enterprise_id_Charge_id": {
+      "type": "hasMany",
+      "model": "Charge",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Charge_id": {
+      "type": "hasMany",
+      "model": "Charge",
+      "foreignKey": "resource_enterprise_id"
+    },
+    "management_enterprise_id_Charge_resourse_id": {
+      "type": "hasMany",
+      "model": "Charge_resourse",
+      "foreignKey": "management_enterprise_id"
+    },
+    "resource_enterprise_id_Charge_resourse_id": {
+      "type": "hasMany",
+      "model": "Charge_resourse",
+      "foreignKey": "resource_enterprise_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

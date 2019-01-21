@@ -1,0 +1,30 @@
+{
+  "name": "Out_link_enterprises",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "head_enterprise_id": {
+      "type": "string",
+      "required": false,
+      "description": "Откуда загрузили организацию"
+    },
+    "ref_enterprise_id": {
+      "type": "number",
+      "required": true,
+      "description": "Загруженная запись организации"
+    },
+    "external_code": {
+      "type": "string",
+      "required": true,
+      "description": "Код из внейшней БД"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

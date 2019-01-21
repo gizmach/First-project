@@ -1,0 +1,36 @@
+{
+  "name": "Out_link_service",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "service_id": {
+      "type": "number",
+      "required": true,
+      "description": "id услуги"
+    },
+    "enterprise_id": {
+      "type": "number",
+      "required": true,
+      "description": "id организации"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "service_id_Service_Ref_id": {
+      "type": "belongsTo",
+      "model": "Service_Ref",
+      "foreignKey": "service_id"
+    },
+    "enterprise_id_Enterprise_Ref_id": {
+      "type": "belongsTo",
+      "model": "Enterprise_Ref",
+      "foreignKey": "enterprise_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,142 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Address_Ref": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Enterprise_Ref": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Out_link_enterprises": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Service_Ref": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Out_link_service": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Charge": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Balance": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Payment": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Social_benefits": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Balance_adjustment": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Charge_resourse": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Balance_resourse": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Payment_resourse": {
+    "dataSource": "stackPostgreDb",
+    "public": true,
+    "options": {
+      "remoting": {}
+    }
+  },
+  "Asset": {
+    "dataSource": "fileSystem",
+    "public": true
+  },
+  "FileIn": {
+    "dataSource": "stackPostgreDb",
+    "public": true
+  },
+  "swagger_api": {
+    "dataSource": null,
+    "public": true
+  }
+}

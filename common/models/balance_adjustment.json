@@ -1,0 +1,43 @@
+{
+  "name": "Balance_adjustment",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "service_id": {
+      "type": "number",
+      "required": true,
+      "description": "Связка на услугу"
+    },
+    "management_enterprise_id": {
+      "type": "number",
+      "required": false,
+      "description": "Связка на УО"
+    },
+    "resource_enterprise_id": {
+      "type": "number",
+      "required": false,
+      "description": "Связка на РСО"
+    },
+    "sum": {
+      "type": "number",
+      "required": true,
+      "description": "",
+      "postgresql": {
+        "dataType": "numeric(20,2)"
+      }
+    },
+    "period": {
+      "type": "date",
+      "required": true,
+      "description": ""
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Service_Ref",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "short_name": {
+      "type": "string",
+      "required": false,
+      "description": "Короткое название"
+    },
+    "full_name": {
+      "type": "string",
+      "required": true,
+      "description": "Полное название"
+    },
+    "units": {
+      "type": "string",
+      "required": false,
+      "description": "Единицы измерения"
+    },
+    "code": {
+      "type": "number",
+      "required": true,
+      "description": "Номер услуги"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "service_id_Enterprise_Ref_id": {
+      "type": "hasMany",
+      "model": "Enterprise_Ref",
+      "foreignKey": "service_id",
+      "through": "out_link_service"
+    },
+    "service_id_Balance_adjustment_id": {
+      "type": "hasMany",
+      "model": "Balance_adjustment",
+      "foreignKey": "service_id"
+    },
+    "service_id_Balance_id": {
+      "type": "hasMany",
+      "model": "Balance",
+      "foreignKey": "service_id"
+    },
+    "service_id_Charge_id": {
+      "type": "hasMany",
+      "model": "Charge",
+      "foreignKey": "service_id"
+    },
+    "service_id_Payment_id": {
+      "type": "hasMany",
+      "model": "Payment",
+      "foreignKey": "service_id"
+    },
+    "service_id_Social_benefits_id": {
+      "type": "hasMany",
+      "model": "Social_benefits",
+      "foreignKey": "service_id"
+    },
+    "service_id_Balance_resourse_id": {
+      "type": "hasMany",
+      "model": "Balance_resourse",
+      "foreignKey": "service_id"
+    },
+    "service_id_Charge_resourse_id": {
+      "type": "hasMany",
+      "model": "Charge_resourse",
+      "foreignKey": "service_id"
+    },
+    "service_id_Payment_resourse_id": {
+      "type": "hasMany",
+      "model": "Payment_resourse",
+      "foreignKey": "service_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

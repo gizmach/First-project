@@ -1,0 +1,43 @@
+{
+  "name": "Address_Ref",
+  "base": "PersistedModel",
+  "strict": true,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "district": {
+      "type": "number",
+      "required": true
+    },
+    "region": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "address_id_charge_id": {
+      "type": "hasMany",
+      "model": "Charge",
+      "foreignKey": "address_id"
+    },
+    "address_id_charge_resourse_id": {
+      "type": "hasMany",
+      "model": "Charge_resourse",
+      "foreignKey": "address_id"
+    },
+    "address_id_balance_id": {
+      "type": "hasMany",
+      "model": "Balance",
+      "foreignKey": "address_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
